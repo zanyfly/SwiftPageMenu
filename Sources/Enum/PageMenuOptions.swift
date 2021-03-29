@@ -95,6 +95,8 @@ public protocol PageMenuOptions {
     var tabMenuContentInset: UIEdgeInsets { get }
 
     var layout: PageMenuLayout { get }
+    
+    var cursorWidth: CGFloat { get }
 }
 
 extension PageMenuOptions {
@@ -113,6 +115,10 @@ extension PageMenuOptions {
 
     public var layout: PageMenuLayout {
         return .layoutGuide
+    }
+    
+    public var cursorWidth: CGFloat {
+        return 0
     }
 }
 

@@ -41,6 +41,10 @@ struct UnderlinePagerOption: PageMenuOptions {
         return .white
     }
     
+    var cursorWidth: CGFloat {
+        return 50
+    }
+
     public init(isInfinite: Bool = false) {
         self.isInfinite = isInfinite
     }

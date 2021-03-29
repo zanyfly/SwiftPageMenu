@@ -325,10 +325,10 @@ extension TabMenuView {
                 cell.isDecorationHidden = false
             }
 
-            self.cursorView.updateWidth(width: cell.frame.width)
+            self.cursorView.updateWidth(width: options.cursorWidth > 0 ? options.cursorWidth : cell.frame.width)
 
             if !isInfinite {
-                self.cursorView.updatePosition(x: cell.frame.origin.x)
+                self.cursorView.updatePosition(x: (options.cursorWidth > 0 ? (cell.frame.width - options.cursorWidth)/2 : 0)  + cell.frame.origin.x)
             }
 
             if !animated && shouldScroll {

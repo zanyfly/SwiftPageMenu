@@ -201,7 +201,7 @@ open class PageMenuController: UIViewController {
 
         guard self.isViewLoaded else { return }
 
-        self.tabView.updateCurrentIndex(index, shouldScroll: true)
+        self.tabView.updateCurrentIndex(index, shouldScroll: true, animated: animated)
     }
 
     /**
@@ -240,7 +240,7 @@ open class PageMenuController: UIViewController {
 
         if let beforeIndex = self.beforeIndex {
             self.tabView.pageTabItems = titles
-            self.tabView.updateCurrentIndex(beforeIndex, shouldScroll: false, animated: false)
+            self.tabView.updateCurrentIndex(beforeIndex, shouldScroll: false, animated: true)
         }
 
         guard defaultIndex < self.viewControllers.count else {
